@@ -8,7 +8,6 @@ from PyQt6.QtWidgets import (
     QTextEdit, QPushButton, QCheckBox, QStatusBar
 )
 
-# All-in-one cleaning function
 def clean_text(text):
     # Remove HTML tags
     text = re.sub(r'<[^>]+>', ' ', text)
@@ -30,7 +29,6 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
-# More realistic processing messages
 FAKE_JARGON = [
     lambda: "→ Reading input...",
     lambda: "→ Removing HTML tags...",
